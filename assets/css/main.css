@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+@import url("base.css");
+
+:root {
+	--primary-clr-600: hsl(31, 77%, 52%);
+	--primary-clr-700: hsl(184, 100%, 22%);
+	--primary-clr-800: hsl(179, 100%, 13%);
+
+	--neutral-clr-400: hsla(0, 0%, 100%, 0.75);
+	--neutral-clr-500: hsl(0, 0%, 95%);
+
+	--ff-heading: "Big Shoulders Display", serif;
+	--ff-body: "Lexend Deca", sans-serif;
+}
+
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+body {
+	background: var(--neutral-clr-500);
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+}
+
+section {
+	max-width: 80em;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	border-radius: 0.75rem;
+	overflow: hidden;
+}
+
+.card {
+	padding: 3rem;
+}
+
+.card > * {
+	margin-block: 3rem;
+}
+
+.card a button {
+	margin-block-start: 3rem;
+}
+
+.sedans {
+	background-color: var(--primary-clr-600);
+}
+
+.suvs {
+	background-color: var(--primary-clr-700);
+}
+
+.luxury {
+	background-color: var(--primary-clr-800);
+}
