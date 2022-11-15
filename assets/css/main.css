@@ -21,32 +21,76 @@
 
 body {
 	background: var(--neutral-clr-500);
+	display: flex;
+	min-height: 100vh;
 }
 
 main {
-	min-height: 100vh;
-	display: flex;
+	max-width: 60em;
+	margin: auto;
 }
 
 section {
-	max-width: 80em;
-	margin: auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	border-radius: 0.75rem;
 	overflow: hidden;
+	margin: 1.5rem;
 }
 
 .card {
 	padding: 3rem;
+	max-width: 38.2ch;
 }
 
-.card > * {
-	margin-block: 3rem;
+.card :not(:first-child) {
+	margin-block: 2rem;
 }
 
-.card a button {
+
+.card h2 {
+	font-family: var(--ff-heading);
+	font-size: 3rem;
+	font-weight: 700;
+	color: var(--neutral-clr-500);
+}
+
+.card p {
+	font-family: var(--ff-body);
+	font-size: 0.9375rem;
+	font-weight: 400;
+	color: var(--neutral-clr-400);
+}
+
+.card button {
 	margin-block-start: 3rem;
+	border-style: none;
+	font-family: var(--ff-body);
+	font-size: 0.9375rem;
+	font-weight: 400;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	background-color: var(--neutral-clr-500);
+	cursor: pointer;
+}
+
+
+.sedans.card button {
+	color: var(--primary-clr-600);
+}
+
+.suvs.card button {
+	color: var(--primary-clr-700);
+}
+
+.luxury.card button {
+	color: var(--primary-clr-800);
+}
+
+.card button:active {
+	background-color: hsla(0, 0%, 95%, .0);
+	color: var(--neutral-clr-500);
+	outline: 2px solid var(--neutral-clr-500);
 }
 
 .sedans {
@@ -59,4 +103,22 @@ section {
 
 .luxury {
 	background-color: var(--primary-clr-800);
+}
+
+@media screen and (max-width: 50em) {
+	section {
+		grid-template-columns: 1fr;
+	}
+
+	.card h2 {
+		font-size: 2.75rem;
+	}
+
+	.card p, .card button {
+		font-size: 0.875rem;
+	}
+
+	.card button {
+		margin-block-start: 0;
+	}
 }
