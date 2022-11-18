@@ -2,123 +2,121 @@
 @import url("base.css");
 
 :root {
-	--primary-clr-600: hsl(31, 77%, 52%);
-	--primary-clr-700: hsl(184, 100%, 22%);
-	--primary-clr-800: hsl(179, 100%, 13%);
+  --primary-clr-600: hsl(31, 77%, 52%);
+  --primary-clr-700: hsl(184, 100%, 22%);
+  --primary-clr-800: hsl(179, 100%, 13%);
 
-	--neutral-clr-400: hsla(0, 0%, 100%, 0.75);
-	--neutral-clr-500: hsl(0, 0%, 95%);
+  --neutral-clr-400: hsla(0, 0%, 100%, 0.75);
+  --neutral-clr-500: hsl(0, 0%, 95%);
 
-	--ff-heading: "Big Shoulders Display", serif;
-	--ff-body: "Lexend Deca", sans-serif;
+  --ff-heading: "Big Shoulders Display", serif;
+  --ff-body: "Lexend Deca", sans-serif;
 }
 
 .screen-reader-text {
-	position: absolute;
-	top: -9999px;
-	left: -9999px;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 
 body {
-	background: var(--neutral-clr-500);
-	display: flex;
-	min-height: 100vh;
+  background: var(--neutral-clr-500);
+  display: flex;
+  min-height: 100vh;
 }
 
 main {
-	max-width: 60em;
-	margin: auto;
+  max-width: 60em;
+  margin: auto;
 }
 
 section {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	border-radius: 0.75rem;
-	overflow: hidden;
-	margin: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin: 1.5rem;
 }
 
 .card {
-	padding: 3rem;
-	max-width: 38.2ch;
+  padding: 3rem;
+  max-width: 38.2ch;
 }
-
-.card :not(:first-child) {
-	margin-block: 2rem;
-}
-
 
 .card h2 {
-	font-family: var(--ff-heading);
-	font-size: 3rem;
-	font-weight: 700;
-	color: var(--neutral-clr-500);
+  font-family: var(--ff-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--neutral-clr-500);
+  margin-block: 2rem;
 }
 
 .card p {
-	font-family: var(--ff-body);
-	font-size: 0.9375rem;
-	font-weight: 400;
-	color: var(--neutral-clr-400);
+  font-family: var(--ff-body);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--neutral-clr-400);
 }
 
-.card button {
-	margin-block-start: 3rem;
-	border-style: none;
-	font-family: var(--ff-body);
-	font-size: 0.9375rem;
-	font-weight: 400;
-	padding: 1rem 2rem;
-	border-radius: 2rem;
-	background-color: var(--neutral-clr-500);
-	cursor: pointer;
+.card a {
+  display: block;
+  max-width: fit-content;
+  margin-block-start: min(10vh, 6rem);
+  font-family: var(--ff-body);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  padding: 0.875rem 2.125rem;
+  border-radius: 2rem;
+  background-color: var(--neutral-clr-500);
+  cursor: pointer;
 }
 
-
-.sedans.card button {
-	color: var(--primary-clr-600);
+.sedans.card a {
+  color: var(--primary-clr-600);
 }
 
-.suvs.card button {
-	color: var(--primary-clr-700);
+.suvs.card a {
+  color: var(--primary-clr-700);
 }
 
-.luxury.card button {
-	color: var(--primary-clr-800);
+.luxury.card a {
+  color: var(--primary-clr-800);
 }
 
-.card button:active {
-	background-color: hsla(0, 0%, 95%, .0);
-	color: var(--neutral-clr-500);
-	outline: 2px solid var(--neutral-clr-500);
+.card a:hover {
+  background-color: hsla(0, 0%, 95%, 0);
+  color: var(--neutral-clr-500);
+  outline: 2px solid var(--neutral-clr-500);
 }
 
 .sedans {
-	background-color: var(--primary-clr-600);
+  background-color: var(--primary-clr-600);
 }
 
 .suvs {
-	background-color: var(--primary-clr-700);
+  background-color: var(--primary-clr-700);
 }
 
 .luxury {
-	background-color: var(--primary-clr-800);
+  background-color: var(--primary-clr-800);
 }
 
 @media screen and (max-width: 50em) {
-	section {
-		grid-template-columns: 1fr;
-	}
+  section {
+    grid-template-columns: 1fr;
+  }
 
-	.card h2 {
-		font-size: 2.75rem;
-	}
+  .card h2 {
+    font-size: 2.75rem;
+  }
 
-	.card p, .card button {
-		font-size: 0.875rem;
-	}
+  .card p,
+  .card button {
+    font-size: 0.875rem;
+  }
 
-	.card button {
-		margin-block-start: 0;
-	}
+  .card button {
+    margin-block-start: 0;
+  }
 }
