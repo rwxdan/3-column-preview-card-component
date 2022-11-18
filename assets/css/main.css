@@ -87,7 +87,7 @@ section {
 .card a:hover {
   background-color: hsla(0, 0%, 95%, 0);
   color: var(--neutral-clr-500);
-  outline: 2px solid var(--neutral-clr-500);
+  border: 2px solid var(--neutral-clr-500);
 }
 
 .sedans {
